@@ -47,7 +47,7 @@
 #story-card-2 .story-card-text h3,
 #story-card-3 .story-card-text h3,
 #story-card-4 .story-card-text h3 {
-    font-size: 16px;
+    font-size: 12px;
 }
 
 #story-card-2 .story-card-text h4,
@@ -87,14 +87,24 @@
 }
 
 .form-control {
-    flex-basis: 32%;
-    flex-grow: 1;
-    background: lightblue;
+
+    background: lightgoldenrodyellow;
 }
 
 .title {
-    font-size: 16px;
+    font-size: 14px;
 }
+
+body {
+    background-color: salmon;
+}
+
+.create-story {
+    flex-wrap: flex;
+    justify-content: space-between;
+}
+
+
 
 
 
