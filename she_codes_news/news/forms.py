@@ -1,7 +1,6 @@
 from django import forms
 from django.forms import ModelForm
 from .models import NewsStory
-from .models import *
 
 class StoryForm(ModelForm):
     class Meta:
@@ -13,7 +12,10 @@ class StoryForm(ModelForm):
                 attrs={
                     'class':'form-control', 
                     'placeholder':'Select a date',
-                    'type':'date'})
+                    'type':'date'}),
+            'title': forms.TextInput( 
+                attrs={
+                    'class':'title'})
         }
 
     
