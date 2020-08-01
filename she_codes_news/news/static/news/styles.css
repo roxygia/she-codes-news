@@ -86,11 +86,8 @@
     50%;
 }
 
-#form-control {
-    float: right;
-    margin: 0 0 10px 10px;
-    width: 
-    50%;
+.form-control {
+    font-size: 35px;
 }
 
 
