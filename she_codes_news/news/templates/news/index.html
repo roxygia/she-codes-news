@@ -5,12 +5,13 @@
 
 {% block stylesheets %}
 <link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}">
-
-
 {% endblock %}
 
 {% block content %}
+
+    {% if user.is_authenticated %}
     <a href="{% url 'news:newStory' %}">Write New Story</a>
+    {% endif %} 
 
     <h2>Latest News</h2>
 
