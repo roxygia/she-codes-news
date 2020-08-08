@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Account Profile</h2>
+
+<h4>Username: {{ request.user }}</h4>
+<h4>Email: {{ request.user.email }}</h4>
+
+{% if object %}
+  {% for story in object.stories.all %}
+  {{ story }}
+  {% endfor %}
+{% endif %}
+
+{% endblock %}
