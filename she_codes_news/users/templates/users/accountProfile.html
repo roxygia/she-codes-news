@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}">
+{% endblock %}
 
 {% block content %}
 
@@ -7,10 +12,14 @@
 <h4>Username: {{ request.user }}</h4>
 <h4>Email: {{ request.user.email }}</h4>
 
+<div id="all-stories">
 {% if object %}
   {% for story in object.stories.all %}
-  {{ story }}
+    {% include "news/storyCard.html" with story=story position=forloop.counter %}
   {% endfor %}
+  {% else %}
+  <p>No stories are available.</p>
 {% endif %}
+</div>
 
 {% endblock %}
