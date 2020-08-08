@@ -12,7 +12,7 @@
 <h4>Username: {{ request.user }}</h4>
 <h4>Email: {{ request.user.email }}</h4>
 
-<div id="all-stories">
+<div id="latest-stories">
 {% if object %}
   {% for story in object.stories.all %}
     {% include "news/storyCard.html" with story=story position=forloop.counter %}
