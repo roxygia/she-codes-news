@@ -17,7 +17,7 @@ class CategoryListView(generic.ListView):
 class CategoryStoryView(generic.DetailView):
     model = NewsStory
     template_name = 'news/categoryStories.html'
-    slug_field = 'category_name'
+    slug_field = 'category'
 
     context_object_name = "stories"
 

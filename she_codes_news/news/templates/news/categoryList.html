@@ -11,11 +11,11 @@
 
 <div id="latest-stories">
 {% if object %}
-  {% for story in category.post_set.all %}
-    {% include "news/storyCard.html" with story=story position=forloop.counter %}
+  {% for story in object.all %}
+    {{ story.category  }}
   {% endfor %}
   {% else %}
-  <p>No stories are available.</p>
+  <p>No categories are available.</p>
 {% endif %}
 </div>
 
