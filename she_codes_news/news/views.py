@@ -6,6 +6,11 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 
+class StoryView(generic.DetailView):
+    model = NewsStory
+    template_name = 'news/story.html'
+    context_object_name = 'story'
+
 class CategoryListView(generic.ListView):
     model = Category
     template_name = 'news/categoryList.html'
@@ -49,7 +54,4 @@ class IndexView(generic.ListView):
         context['all_stories'] = NewsStory.objects.all().order_by('-pub_date')
         return context
 
-class StoryView(generic.DetailView):
-    model = NewsStory
-    template_name = 'news/story.html'
-    context_object_name = 'story'
+
