@@ -77,18 +77,17 @@
 
 #story-content {
     text-align: justify;
+    padding-left: 20px;
 }
 
 #story-content img {
     float: right;
-    margin: 0 0 10px 10px;
-    width: 
-    50%;
+    margin: 0px 10px 20px 40px;
+    width: 50%;
 }
 
 .form-control {
-
-    background: lightgoldenrodyellow;
+    background: lightgray;
 }
 
 .title {
@@ -99,11 +98,23 @@ body {
     background-color: salmon;
 }
 
-.create-story {
-    flex-wrap: flex;
+form {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: stretch;
     justify-content: space-between;
 }
 
+form p {
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+
+}
+
+.submit-button {
+    width: 200px;
+}
 
 
 

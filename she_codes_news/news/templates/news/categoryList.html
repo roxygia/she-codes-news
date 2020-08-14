@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block stylesheets %}
+<link rel="stylesheet" type="text/css" href="{% static 'news/styles.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<h2>Category List</h2>
+
+<div id="latest-stories">
+{% if object %}
+  {% for story in object.all %}
+    {{ story.category  }}
+  {% endfor %}
+  {% else %}
+  <p>No categories are available.</p>
+{% endif %}
+</div>
+
+{% endblock %}
